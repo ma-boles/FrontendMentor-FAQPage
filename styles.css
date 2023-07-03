@@ -1,58 +1,126 @@
 * {
     font-family: 'Kumbh Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-/*@media (max-width: 375px) {
-    .container {
-        width: 375px;
+
+/* mobile view*/
+@media all and (max-width: 375px) {
+    
+    body {
+      margin: 1em;
+      margin-bottom: 5em;
+      background-image: linear-gradient(to bottom right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     }
 
-}*/
+    .container {
+        flex-wrap: wrap;
+        margin-top: 15em;
+    }
 
-body {
-    background-image: linear-gradient(to bottom right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .container > div {
+        flex: 1 1 100%;
+        margin: 0em;
+        border-radius: 1em;
+    }
+
+    .image {
+        
+        height: 7em;
+        position: relative;
+      
+    }
+    .woman {
+        max-height: 14em;
+        position: absolute;
+        left: 19px;
+        bottom: 25px;
+    }
+    
+    .box {
+        position: absolute;
+        max-height: 7em;
+        bottom: 55px;
+        left: 15px;
+    }
+    .pattern {
+        position: absolute;
+        max-height: 18em;
+        bottom: 0px;
+        left: 1em;
+    }
+
+    h1 {
+       text-align: center;
+    }
+    p {
+        margin-left: .5em;
+        font-size: 1em;
+    }
+    
+    hr {
+        width: 93%;
+    }
+    #lastQ {
+        margin-bottom: 3em;
+    }
+    
+    footer {
+        position: relative;
+       left: 0px;
+       bottom: 0px;
+    }
+  }
+
+
+/* desktop view */
+  @media all and (min-width: 376px) {
+    body {
+        margin: 7em;
+        background-image: linear-gradient(to bottom right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    }
+    .woman {
+        position: absolute;
+        left: 50px;
+        top:17em;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .box {
+        position:absolute;
+        top: 25em;
+        left: 30px;
+    }
+
+    .pattern {
+        position: absolute;
+        bottom: -15em;
+        right: 50em;
+        height: auto;
+
+    }
+    
+  }
+
+
 .container {
     background-color: white;
     display: flex;
-    box-sizing: border-box;
-    margin: 10em 10em;
     border-radius: 1em;
-    padding: 70px;
     box-shadow: 0px 20px 20px rgba(14, 14, 14, 0.219);
 }
 
 .faqs {
     width: 25em;
+    min-width: 343px;
     flex: 1;
+    margin-top: 1em;
+    margin-right: 3em;
+    margin-bottom: 1em;
+    margin-left: 1em;
 }
 .image {
     flex: 1;
-   
-}
-.pattern {
-    position: absolute;
-    left: 1px;
-    height: 1000px;
-    width: 800px;
-    top: 10px;
-}
-.woman {
-    position: absolute;
-    left: 80px;
-    top: 18em;
-}
-
-.box {
-    position:absolute;
-    top: 26em;
-    left: 67px;
 }
 
 button, .arrow {
@@ -60,7 +128,7 @@ button, .arrow {
     border-style: none;
     cursor: pointer;
     align-self: center;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 10px;
     float: right;
 }
@@ -76,31 +144,36 @@ h1 {
     margin-top: 30px;
 }
 
-/*.questionLine {
-    display: inline-flex;
-    line-height: 3em;
-   
-}*/
-
+.question:hover {
+    color: red;
+    cursor: pointer;
+}
 
 p {
     font-size: 1em;
     margin-right: 10px;
     margin-bottom: 1.5em;
 }
-  
+
+#lastQ {
+    margin-bottom: 3em;
+}
+
 footer {
-    position: absolute;
+    position: relative;
+    margin-top: 100px;
+    left: 0px;
+    bottom: 0px;
     top: 800;
     width: 100%;
-    background-image: linear-gradient(to top right, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-
+    background-image: gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 .attribution { 
-    font-size: 11px; 
+    font-size: 14px; 
     text-align: center; 
     justify-content: center;
+    bottom: 0px;
 }    
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color:whitesmoke; 
 }
